@@ -1,0 +1,86 @@
+/* Sección de Introducción */
+.intro-conferencias {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #2c6e49, #6cbf84); /* Degradado verde */
+    color: white;
+    border-bottom: 5px solid #2c6e49;
+}
+
+.intro-conferencias h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.intro-conferencias p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* Sección de Conferencias */
+.listado-conferencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tarjetas dinámicas */
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo de las Tarjetas */
+.conferencia {
+    background-color: #e8f5e9; /* Verde suave */
+    border: 2px solid #2c6e49; /* Borde verde oscuro */
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conferencia:hover {
+    transform: translateY(-5px); /* Elevación al pasar el ratón */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Más sombra */
+}
+
+/* Imágenes de Conferencias */
+.conferencia img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #2c6e49; /* Separador elegante */
+}
+
+/* Títulos de Conferencias */
+.conferencia h3 {
+    color: #2c6e49; /* Verde oscuro */
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+/* Texto de Conferencias */
+.conferencia p {
+    font-size: 1em;
+    color: #555; /* Texto tenue */
+    padding: 0 15px 15px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .intro-conferencias h2 {
+        font-size: 2em;
+    }
+
+    .intro-conferencias p {
+        font-size: 1em;
+        max-width: 600px;
+    }
+
+    .listado-conferencias {
+        grid-template-columns: 1fr; /* Una tarjeta por fila en pantallas pequeñas */
+    }
+}

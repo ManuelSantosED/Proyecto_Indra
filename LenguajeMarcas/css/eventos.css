@@ -1,0 +1,40 @@
+/* Categorías de Eventos */
+.categorias-eventos {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.categorias-eventos h2 {
+    font-size: 2em;
+    color: #2c6e49;
+    margin-bottom: 20px;
+}
+
+.categoria {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.categoria a {
+    text-decoration: none;
+    color: #2c6e49;
+}
+
+.categoria a:hover h3 {
+    color: #f0a500; /* Amarillo cálido al pasar el ratón */
+}
+
+.categoria-img {
+    width: 300px;
+    height: auto; /* Mantiene las proporciones */
+    border: 2px solid black;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoria-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra al interactuar */
+}

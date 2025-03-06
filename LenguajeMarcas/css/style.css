@@ -1,0 +1,254 @@
+/* General */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f9f4; /* Fondo claro y fresco */
+    color: #333; /* Texto oscuro para contraste */
+}
+
+/* Cabecera */
+header {
+    background-color: #2c6e49; /* Verde oscuro sostenible */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Menú de navegación */
+nav {
+    background-color: #000; /* Fondo negro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover, nav a.actual-position {
+    background-color: #2c6e49; /* Fondo verde al interactuar */
+    color: white;
+}
+
+/* Menú desplegable */
+.menu-desplegable {
+    position: relative; /* Necesario para que el submenu se posicione dentro */
+}
+
+
+
+
+
+
+
+.menu-desplegable .submenu {
+    display: none;
+    max-height: 0; /* Oculto al inicio */
+    overflow: hidden; /* Ocultar contenido desbordado */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2c6e49;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: max-height 0.3s ease; /* Transición para mostrar */
+}
+
+.menu-desplegable:hover .submenu {
+    display: block;
+    max-height: 200px; /* Cambia según el tamaño del submenú */
+}
+
+
+
+
+
+.submenu a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.submenu a:hover {
+    background-color: #f0a500; /* Fondo amarillo cálido al interactuar */
+}
+
+
+
+
+/* Sección de bienvenida */
+.bienvenida {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #2c6e49, #6cbf84); /* Degradado verde */
+    color: white;
+}
+
+.bienvenida h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.bienvenida p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.bienvenida a.boton-destacado {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0b720d;
+    border: 2px solid black;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.bienvenida a.boton-destacado:hover {
+    background-color: #0cc40fc5;
+    border: 2px solid black;
+    color: rgb(3, 0, 0);
+    transform: scale(1.05);
+}
+
+/* Carrusel */
+.carrusel {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff; /* Blanco para contraste */
+}
+
+.carrusel h2 {
+    font-size: 2em;
+    color: #2c6e49; /* Verde oscuro */
+    margin-bottom: 30px;
+}
+
+.carrusel-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Siempre 3 columnas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin: 20px 0;
+}
+
+/* Tarjetas */
+.tarjeta {
+    background-color: #e8f5e9; /* Verde claro */
+    border: 2px solid black; /* Borde negro para resaltar */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Efecto de hover */
+}
+
+/* Imagen dentro de la tarjeta */
+.tarjeta img {
+    width: 100%; /* La imagen ocupa todo el ancho */
+    height:30%; /* Mantiene las proporciones */
+    display: block;
+}
+
+/* Contenido de la tarjeta */
+.tarjeta h3 {
+    color: #2c6e49; /* Verde oscuro */
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    font-size: 1em;
+    margin: 10px 15px 15px;
+    color: #555;
+}
+
+/* Botón dentro de la tarjeta */
+.tarjeta button {
+    background-color: #45741e; /* Amarillo cálido */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.tarjeta button:hover {
+    background-color: #d48806; /* Amarillo más oscuro */
+}
+
+/* Footer */
+footer {
+    background-color: #2c6e49; /* Verde oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #f0a500; /* Amarillo cálido */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #d48806; /* Amarillo más oscuro */
+}
+
+footer img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* Cambiando el tamaño de las tarjetas para los diferentes dispositivos*/
+@media (max-width: 768px) {
+    .carrusel-container {
+        grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas */
+    }
+}
+
+@media (max-width: 480px) {
+    .carrusel-container {
+        grid-template-columns: 1fr; /* Cambiar a 1 columna */
+    }
+}
