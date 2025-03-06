@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Eventos Sostenibles | Inscripciones</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- Navegación y diseño global -->
+    <link rel="stylesheet" href="../css/inscripciones.css"> <!-- Estilos específicos -->
+    <link rel="icon" href="../img/ODS.png">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <h1>Inscripciones</h1>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <div class="menu-desplegable">
+                <a href="eventos.html">Eventos</a>
+                <div class="submenu">
+                    <a href="actividades.html">Actividades</a>
+                    <a href="talleres.html">Talleres</a>
+                    <a href="conferencias.html">Conferencias</a>
+                </div>
+            </div>
+            <a href="sobrenosotros.html">Sobre Nosotros</a>
+            <a class="actual-position" href="inscripciones.html">Inscripciones</a>
+            <a href="login.html">Iniciar Sesión</a>
+            <a href="registro.html">Registrarse</a>
+        </nav>
+    </header>
+
+    <!-- Sección Principal -->
+    <div class="main-inscripciones">
+        <section class="intro-inscripciones">
+            <h2>Formulario de Inscripción</h2>
+            <p>Rellena este formulario para inscribirte en nuestras actividades, talleres o conferencias. ¡Forma parte del cambio hacia la sostenibilidad!</p>
+        </section>
+    </div>
+
+    <!-- Sección del Formulario -->
+    <section class="formulario-inscripcion">
+        <h2>Inscríbete Aquí</h2>
+        <form action="procesar-inscripcion.html" method="post">
+            <div class="campo">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
+            </div>
+
+            <div class="campo">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required placeholder="Ingresa tu correo electrónico">
+            </div>
+
+            <div class="campo">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="Ingresa tu número de teléfono">
+            </div>
+
+            <div class="campo">
+                <label for="evento">Selecciona el Tipo de Evento:</label>
+                <select id="evento" name="evento" required>
+                    <option value="" disabled selected>Elige una opción</option>
+                    <option value="actividades">Actividades</option>
+                    <option value="talleres">Talleres</option>
+                    <option value="conferencias">Conferencias</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="mensaje">Mensaje o Comentarios:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí tus comentarios o dudas"></textarea>
+            </div>
+
+            <div class="campo">
+                <button type="submit">Enviar Inscripción</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <h3>Nuestras redes:</h3> 
+        <img src="../img/LogoInstagram.jpeg" alt="Logo de Instagram" style="width:20px; height:20px;"> @SostenibilidadSantos |
+        <img src="../img/LogoWhatsAap.png" alt="Logo de WhatsApp" style="width:20px; height:20px;"> 603783977
+    </footer>
+</body>
+</html>

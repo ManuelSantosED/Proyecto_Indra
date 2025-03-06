@@ -1,0 +1,117 @@
+/* Estilo General */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f9f4;
+    color: #333;
+}
+
+/* Fondo Principal del Registro */
+.main-registro {
+    background: linear-gradient( rgb(0, 0, 0),rgba(0, 0, 0, 0.75),rgba(0,0,0,0), rgba(0,0,0,0)), url(../img/background-registro.gif) no-repeat center center/cover;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    text-align: center;
+    background: 100;
+    margin: 0px;
+}
+
+/* Formulario de Registro */
+.registro-form {
+    background-color: rgb(222, 221, 221); /* Fondo blanco semitransparente */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(88, 196, 16); /* Sombra */
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.registro-form h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #0d582e; /* Verde oscuro */
+    margin-bottom: 20px;
+}
+
+/* Campos del Formulario */
+.campo {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.campo input {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 1em;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campo input:focus {
+    border-color: #2f3f36; /* Verde */
+    box-shadow: 0 0 6px rgba(44, 110, 73, 0.5); /* Resplandor */
+    outline: none;
+}
+
+/* Botón de Registro */
+.campo button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #2c6e49; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.campo button:hover {
+    background-color: #6cbf84; /* Verde claro */
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+.campo button:active {
+    transform: scale(1);
+}
+
+/* Enlace a Iniciar Sesión */
+.opciones {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.opciones a {
+    color: #2c6e49;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.opciones a:hover {
+    color: #6cbf84; /* Verde claro */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .main-registro {
+        padding: 20px;
+    }
+
+    .registro-form {
+        width: 90%;
+    }
+}
