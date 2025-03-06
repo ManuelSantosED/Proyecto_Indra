@@ -5,10 +5,10 @@ body {
     padding: 0;
     line-height: 1.6;
     background-color: #f4f9f4; /* Fondo claro y fresco */
-    color: #333; /* Texto en color oscuro */
+    color: #333; /* Texto oscuro para contraste */
 }
 
-/* Header */
+/* Cabecera */
 header {
     background-color: #2c6e49; /* Verde oscuro sostenible */
     color: white;
@@ -21,23 +21,35 @@ header h1 {
     margin: 0;
 }
 
+/* Menú de navegación */
 nav {
-    margin-top: 10px;
+    background-color: #000; /* Fondo negro */
+    display: flex;
+
+    gap: 15px;
+    padding-top: 2px;
 }
 
 nav a {
     text-decoration: none;
-    color: white;
-    margin: 0 15px;
+    color: white; /* Color de los enlaces */
     font-size: 1.2em;
     transition: color 0.3s ease;
 }
 
-nav a:hover, nav a.actual-position {
-    color: #f0a500; /* Destacar con amarillo cálido */
+nav a.actual-position {
+    color: #000000; /* Verde sostenible al interactuar */
+    background-color: #2c6e49;
+    padding: 5px;
 }
 
-/* Bienvenida */
+nav a:hover{
+    color: #ffee00; /* Verde sostenible al interactuar */
+    padding: 5px;
+}
+
+
+/* Sección de bienvenida */
 .bienvenida {
     text-align: center;
     padding: 50px 20px;
@@ -58,7 +70,8 @@ nav a:hover, nav a.actual-position {
 .bienvenida a.boton-destacado {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #f0a500; /* Amarillo cálido */
+    background-color: #0b720d;
+    border: 2px solid black;
     color: white;
     text-decoration: none;
     font-size: 1.2em;
@@ -67,40 +80,13 @@ nav a:hover, nav a.actual-position {
 }
 
 .bienvenida a.boton-destacado:hover {
-    background-color: #d48806; /* Amarillo más oscuro */
+    background-color: #0cc40fc5;
+    border: 2px solid black;
+    color: rgb(3, 0, 0);
     transform: scale(1.05);
 }
 
 /* Carrusel */
-.tarjeta img {
-    width: 100%; /* Hace que la imagen ocupe el ancho completo de la tarjeta */
-    height: auto; /* Mantiene las proporciones originales de la imagen */
-    display: block; /* Elimina el espacio extra debajo de la imagen */
-    border-top-left-radius: 5px; /* Opcional: Redondea esquinas superiores */
-    border-top-right-radius: 5px; /* Opcional: Redondea esquinas superiores */
-}
-    /* Tarjetas de carrusel, basicamnete son las tarjetas que se muestran
-    para que no quede muy descudrado y varian segun el dispositivo*/
-    .carrusel-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Siempre 3 columnas */
-        gap: 20px; /* Espacio entre las tarjetas */
-        margin: 20px 0;
-    }
-
-    @media (max-width: 768px) {
-        .carrusel-container {
-            grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas */
-        }
-    }
-
-    @media (max-width: 480px) {
-        .carrusel-container {
-            grid-template-columns: 1fr; /* Cambiar a 1 columna */
-        }
-    }
-
-
 .carrusel {
     padding: 40px 20px;
     text-align: center;
@@ -115,50 +101,72 @@ nav a:hover, nav a.actual-position {
 
 .carrusel-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Siempre 3 columnas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin: 20px 0;
 }
 
-.evento {
-    background-color: #e8f5e9; /* Verde suave */
-    border: 1px solid #c8e6c9; /* Borde tenue */
+/* Tarjetas */
+.tarjeta {
+    background-color: #e8f5e9; /* Verde claro */
+    border: 2px solid black; /* Borde negro para resaltar */
     border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.evento:hover {
+.tarjeta:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Efecto de hover */
 }
 
-.evento h3 {
+/* Imagen dentro de la tarjeta */
+.tarjeta img {
+    width: 100%; /* La imagen ocupa todo el ancho */
+    height:30%; /* Mantiene las proporciones */
+    display: block;
+}
+
+/* Contenido de la tarjeta */
+.tarjeta h3 {
     color: #2c6e49; /* Verde oscuro */
     font-size: 1.5em;
     margin-bottom: 15px;
 }
 
-.evento p {
+.tarjeta p {
     font-size: 1em;
-    margin: 10px 0;
+    margin: 10px 15px 15px;
     color: #555;
 }
 
-.evento a {
-    color: #2c6e49;
+/* Botón dentro de la tarjeta */
+.tarjeta button {
+    background-color: #45741e; /* Amarillo cálido */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta button a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-.evento a:hover {
-    color: #f0a500; /* Amarillo cálido */
+.tarjeta button:hover {
+    background-color: #d48806; /* Amarillo más oscuro */
 }
 
 /* Footer */
 footer {
-    background-color: #2c6e49;
+    background-color: #2c6e49; /* Verde oscuro */
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -170,13 +178,13 @@ footer h3 {
 }
 
 footer a {
-    color: #f0a500;
+    color: #f0a500; /* Amarillo cálido */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #d48806;
+    color: #d48806; /* Amarillo más oscuro */
 }
 
 footer img {
@@ -184,4 +192,17 @@ footer img {
     height: 20px;
     vertical-align: middle;
     margin-left: 5px;
+}
+
+/* Cambiando el tamaño de las tarjetas para los diferentes dispositivos*/
+@media (max-width: 768px) {
+    .carrusel-container {
+        grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas */
+    }
+}
+
+@media (max-width: 480px) {
+    .carrusel-container {
+        grid-template-columns: 1fr; /* Cambiar a 1 columna */
+    }
 }
