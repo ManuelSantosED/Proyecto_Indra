@@ -25,28 +25,74 @@ header h1 {
 nav {
     background-color: #000; /* Fondo negro */
     display: flex;
-
+    align-items: center;
+    justify-content: center;
     gap: 15px;
-    padding-top: 2px;
+    padding: 10px 0;
+    position: relative;
 }
 
 nav a {
     text-decoration: none;
-    color: white; /* Color de los enlaces */
+    color: white;
     font-size: 1.2em;
-    transition: color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav a.actual-position {
-    color: #000000; /* Verde sostenible al interactuar */
+nav a:hover, nav a.actual-position {
+    background-color: #2c6e49; /* Fondo verde al interactuar */
+    color: white;
+}
+
+/* Menú desplegable */
+.menu-desplegable {
+    position: relative; /* Necesario para que el submenu se posicione dentro */
+}
+
+
+
+
+
+
+
+.menu-desplegable .submenu {
+    display: none;
+    max-height: 0; /* Oculto al inicio */
+    overflow: hidden; /* Ocultar contenido desbordado */
+    position: absolute;
+    top: 100%;
+    left: 0;
     background-color: #2c6e49;
-    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: max-height 0.3s ease; /* Transición para mostrar */
 }
 
-nav a:hover{
-    color: #ffee00; /* Verde sostenible al interactuar */
-    padding: 5px;
+.menu-desplegable:hover .submenu {
+    display: block;
+    max-height: 200px; /* Cambia según el tamaño del submenú */
 }
+
+
+
+
+
+.submenu a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.submenu a:hover {
+    background-color: #f0a500; /* Fondo amarillo cálido al interactuar */
+}
+
+
 
 
 /* Sección de bienvenida */

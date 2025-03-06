@@ -1,0 +1,92 @@
+/* Estilo General */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f9f4; /* Fondo claro */
+    color: #333; /* Texto oscuro */
+}
+
+/* Contenedor Principal */
+.main-detalle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+}
+
+/* Sección de Detalle del Evento */
+.detalle-evento {
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.detalle-evento h2 {
+    font-size: 2em;
+    color: #2c6e49; /* Verde oscuro */
+    margin-bottom: 15px;
+}
+
+.detalle-evento p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+/* Imagen del Evento */
+.detalle-evento .evento-imagen {
+    max-width: 100%; /* Nunca más ancha que su contenedor */
+    width: auto; /* Ajusta el ancho según sea necesario */
+    max-height: 400px; /* Establece una altura máxima para evitar que se alargue */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 auto 20px auto; /* Centra la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Botón de Inscripción */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #2c6e49; /* Verde */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #6cbf84; /* Verde claro */
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+.cta-button:active {
+    transform: scale(1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .detalle-evento {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .detalle-evento h2 {
+        font-size: 1.8em;
+    }
+
+    .detalle-evento p {
+        font-size: 1em;
+    }
+
+    .detalle-evento .evento-imagen {
+        max-height: 300px; /* Reduce la altura máxima en pantallas pequeñas */
+    }
+}
+
